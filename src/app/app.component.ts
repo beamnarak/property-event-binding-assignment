@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  data: number;
+  gameStatus: boolean;
+
+  onGameRun(timeEvent: { data: number, gameStatus: boolean }){
+    this.data = timeEvent.data;
+    this.gameStatus = timeEvent.gameStatus;
+  }
 }
